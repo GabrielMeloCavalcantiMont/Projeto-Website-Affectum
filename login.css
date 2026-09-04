@@ -1,6 +1,6 @@
 body{
 
-    background-color: rgb(88, 57, 27);
+    background-color: var(--azul);
 }
 
 main{

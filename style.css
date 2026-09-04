@@ -3,3 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --azul: #145780;
+    --ciano: #3EA6AD;
+    --amarelo: #F5B55B;
+    --salmao: #FADBAF;
+}
