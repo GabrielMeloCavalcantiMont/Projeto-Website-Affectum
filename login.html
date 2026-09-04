@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <main>
+        <section id="usuario">
+            <button id="btn-profissional">Profissional</button>
+            <button id="btn-paciente">Paciente</button>
+        </section>
+        <section id="login">
+
+            <img src="imagens/{3B128924-8299-4BCF-B2AF-3DC88809D358}.png" alt="">
+            <div class="login">
+                <div>
+
+                    <h1></h1>
+                </div>
+                <form action="">
+                    <h2>Entrar</h2>
+                    <input type="text">
+                    <input type="text">
+                    <input class="entrar" value="Entrar" type="submit">
+                </form>
+            </div>
+        </section>
+    </main>
+    <script>
+        const btnProfissional = document.getElementById('btn-profissional');
+        const btnPaciente = document.getElementById('btn-paciente');
+
+        btnProfissional.addEventListener('click', () => {
+            document.getElementById("login").style.display = 'flex';
+            document.getElementById("usuario").style.display = 'none';
+            document.querySelector('#login h1').innerHTML = "Bem vindo profissional";
+        });
+        btnPaciente.addEventListener('click', () => {
+            document.getElementById("login").style.display = 'flex';
+            document.getElementById("usuario").style.display = 'none';
+            document.querySelector('#login h1').innerHTML = "Bem vindo Paciente";
+        });
+    </script>
+</body>
+</html>
