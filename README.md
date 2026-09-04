@@ -7,6 +7,7 @@ Projeto iniciado em 14/08/2026
 Professores: Gilberto de Oliveira Antônio; Josenyr Santos Rosa e Carlos Eduardo da Silva.
 
 Empresa cliente: Clínica de Psicologia Affectum - SP
+
 Site atual 04/09/2026: https://www.affectumsp.com.br
 
 Copyright (c) 2026 Up4Ware Team.
