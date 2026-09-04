@@ -36,12 +36,9 @@ main{
 }
 
 img{
-    border-radius: 100000px;
-    width: 60%;
-    height: 750px;
-    /* position: relative;
-    bottom: 5%;
-    right: 20%; */
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    width: 800px;
 }
 
 .login{
