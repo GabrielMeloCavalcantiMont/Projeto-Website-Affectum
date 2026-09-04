@@ -1,0 +1,40 @@
+.btn
+{
+    outline-color: #F5B55B;
+    background-color: #F5B55B;
+    color: #fff;
+    font-family: 'Huninn', serif;
+
+}
+
+.btn:hover
+{
+    background-color: #d4943a;
+    border-color: #d4943a;
+    color: #fff;
+}
+
+#Titulo
+{
+    text-align: center;
+    font-family: 'Amethysta', serif;
+    color: #f5b55b;
+    margin-top: 50px;
+}
+
+#Subtitulo
+{
+    text-align: center;
+    font-family: 'Huninn', serif;
+    color: #145780;
+    margin-top: 20px;
+}
+
+#Subtitulo2
+{
+    text-align: center;
+    font-family: 'Special Gothic Expanded One', serif;
+    font-size: 50px;
+    color: #3ea6ad;
+    margin-top: 20px;
+}
