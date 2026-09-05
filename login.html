@@ -2,29 +2,47 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Login</title>
 </head>
 <body>
     <main>
         <section id="usuario">
-            <button id="btn-profissional">Profissional</button>
-            <button id="btn-paciente">Paciente</button>
+            <button id="btn-profissional"><img src="imagens/profissional.svg" alt="">Profissional</button>
+            <button id="btn-paciente"><img src="imagens/paciente.svg" alt="">Paciente</button>
         </section>
-        <section id="login">
+        <section class="login-usuario" id="login-profissional">
 
             <img src="imagens/fundo.png" alt="">
             <div class="login">
                 <div>
-
-                    <h1></h1>
+                    <h1>Bem vindo profissional</h1>
                 </div>
                 <form action="">
                     <h2>Entrar</h2>
-                    <input type="text">
-                    <input type="text">
+                    <input placeholder="Código" type="text">
+                    <input placeholder="E-mail" type="text">
+                    <input placeholder="Senha" type="text">
+                    <input class="entrar" value="Entrar" type="submit">
+                </form>
+            </div>
+        </section>
+        <section class="login-usuario" id="login-paciente">
+
+            <img src="imagens/fundo.png" alt="">
+            <div class="login">
+                <div>
+                    <h1>Bem vindo Paciente</h1>
+                </div>
+                <form action="">
+                    <h2>Entrar</h2>
+                    <input placeholder="CPF" type="text">
+                    <input placeholder="Senha" type="text">
                     <input class="entrar" value="Entrar" type="submit">
                 </form>
             </div>
@@ -35,14 +53,12 @@
         const btnPaciente = document.getElementById('btn-paciente');
 
         btnProfissional.addEventListener('click', () => {
-            document.getElementById("login").style.display = 'flex';
+            document.getElementById("login-profissional").style.display = 'flex';
             document.getElementById("usuario").style.display = 'none';
-            document.querySelector('#login h1').innerHTML = "Bem vindo profissional";
         });
         btnPaciente.addEventListener('click', () => {
-            document.getElementById("login").style.display = 'flex';
+            document.getElementById("login-paciente").style.display = 'flex';
             document.getElementById("usuario").style.display = 'none';
-            document.querySelector('#login h1').innerHTML = "Bem vindo Paciente";
         });
     </script>
 </body>
