@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Amethysta&family=Huninn&family=Special+Gothic+Expanded+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Amethysta&family=Huninn&family=Special+Gothic+Expanded+One&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="index.css" />
@@ -33,11 +33,11 @@
     </nav>
 
     <!-- Carrosel -->
-    <div id="carouselExampleCaptions" class="carousel slide">
+    <div id="carouselExampleIndicators" class="carousel slide">
       <div class="carousel-indicators">
         <button
           type="button"
-          data-bs-target="#carouselExampleCaptions"
+          data-bs-target="#carouselExampleIndicators"
           data-bs-slide-to="0"
           class="active"
           aria-current="true"
@@ -45,55 +45,40 @@
         ></button>
         <button
           type="button"
-          data-bs-target="#carouselExampleCaptions"
+          data-bs-target="#carouselExampleIndicators"
           data-bs-slide-to="1"
           aria-label="Slide 2"
         ></button>
         <button
           type="button"
-          data-bs-target="#carouselExampleCaptions"
+          data-bs-target="#carouselExampleIndicators"
           data-bs-slide-to="2"
           aria-label="Slide 3"
         ></button>
       </div>
-      <!-- Primeiro slide -->
       <div class="carousel-inner">
         <div class="carousel-item active">
+          <img src="./imagens/entrada.jpeg" class="d-block" alt="Clínica" />
+        </div>
+        <div class="carousel-item">
           <img
-            src="/imagens/AffectumLogo.jpeg"
-            class="d-block w-50"
-            alt="Logo Affectum"
-            style="margin: 0 auto"
+            src="./imagens/clinica.jpeg"
+            class="d-block"
+            alt="Sala principal"
           />
-          <div class="carousel-caption d-none d-md-block">
-            <h5 id="Title">AFFECTUM</h5>
-            <p id="Sub">
-              Transformamos histórias, cuidamos de almas e damos voz à sua
-              essência.
-            </p>
-          </div>
         </div>
-        <!-- Segundo slide -->
         <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="..." />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div>
-        </div>
-        <!-- Terceiro slide -->
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="..." />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
+          <img
+            src="./imagens/placeholder3.jpg"
+            class="d-block"
+            alt="Placeholder 3"
+          />
         </div>
       </div>
       <button
         class="carousel-control-prev"
         type="button"
-        data-bs-target="#carouselExampleCaptions"
+        data-bs-target="#carouselExampleIndicators"
         data-bs-slide="prev"
       >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -102,7 +87,7 @@
       <button
         class="carousel-control-next"
         type="button"
-        data-bs-target="#carouselExampleCaptions"
+        data-bs-target="#carouselExampleIndicators"
         data-bs-slide="next"
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -110,29 +95,143 @@
       </button>
     </div>
 
-    <h1 id="Titulo">Seja bem vindo à Affectum</h1>
-    <p id="Subtitulo">Onde você é nosa prioridade.</p>
-    <p id="Subtitulo2">Acesse o nosso sistema e veja como podemos te ajudar.</p>
-
-    <div class="view">
-      <div class="block"></div>
-      <br /><br />
-      <div class="block"></div>
-      <br /><br />
-      <div class="block"></div>
-      <br /><br />
-      <div class="block"></div>
-      <br /><br />
-      <div class="block"></div>
-      <br /><br />
-      <div class="block"></div>
-      <br /><br />
-      <div class="block"></div>
-      <br /><br />
-      <div class="block"></div>
-      <br /><br />
-      <div class="block"></div>
-      <div class="block"></div>
+    <!-- Textos de entrada -->
+    <div class="autoShow" id="textos">
+      <h1 id="Titulo" class="autoShow">Seja bem vindo à Affectum</h1>
+      <p id="Subtitulo" class="autoShow">
+        Transformamos histórias, cuidamos de almas e damos voz à sua essência.
+      </p>
     </div>
+
+    <br /><br />
+
+    <!-- Textos sobre a clínica -->
+    <div="view">
+      <div class="block">
+        <div class="block-content">
+          <div class="block-text">
+            <h2 id="T-sobre" class="autoShow">Sobre a Affectum</h2>
+            <br />
+            <p id="sobre" class="autoShow">
+              Bem-vindos à Clínica Affectum, um espaço de cuidado integral
+              inaugurado em 1 de agosto de 2022. Aqui, acreditamos que a saúde
+              emocional, psicológica e física é para todas as idades. Nossa
+              equipe dedicada está comprometida em ajudar você a alcançar uma
+              vida mais saudável em todos esses aspectos. Seja você uma criança,
+              adulto ou idoso, estamos aqui para apoiá-lo em sua jornada para o
+              bem-estar. Sua saúde é nossa prioridade.
+            </p>
+          </div>
+          <img
+            src="./imagens/placeholder4.jpg"
+            alt="Clínica Affectum"
+            class="block-img"
+          />
+        </div>
+      </div>
+      <!-- 2º texto -->
+      <div class="block-right">
+        <div class="block-content">
+          <img
+            src="./imagens/placeholder1.jpg"
+            alt="Clínica Affectum"
+            class="block-img"
+          />
+          <div class="block-text">
+            <h2 id="T-sobre" class="autoShow">Psicologia</h2>
+            <br />
+            <p id="sobre" class="autoShow">
+              Clareza mental, equilíbrio emocional, autoconhecimento. Encontre o
+              suporte necessário para alcançar o bem-estar emocional com a ajuda
+              de nossos psicólogos. Nossa equipe experiente está aqui para
+              ouvir, apoiar e guiar você em sua jornada para uma vida mais
+              saudável e feliz. Não hesite em dar esse passo em direção a uma
+              mente mais saudável. Entre em contato conosco hoje para marcar uma
+              consulta. Seu bem-estar é nossa prioridade.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- 3º texto -->
+      <div class="block">
+        <div class="block-content">
+          <div class="block-text">
+            <h2 id="T-sobre" class="autoShow">Fonoaudiologia</h2>
+            <br />
+            <p id="sobre" class="autoShow">
+              A voz é a nossa janela para o mundo. Se você está enfrentando
+              desafios na comunicação, fala, linguagem ou audição, nossos
+              fonoaudiólogos estão aqui para ajudar. Com expertise e cuidado,
+              eles podem diagnosticar, tratar e aprimorar suas habilidades de
+              comunicação. Não deixe que obstáculos na sua voz ou audição
+              limitem sua vida. Marque uma consulta com nossos fonoaudiólogos e
+              dê um passo em direção a uma comunicação mais clara e confiante.
+              Sua voz é única - cuide dela com os especialistas certos.
+            </p>
+          </div>
+          <img
+            src="./imagens/placeholder4.jpg"
+            alt="Clínica Affectum"
+            class="block-img"
+          />
+        </div>
+      </div>
+
+      <!-- 4º texto -->
+      <div class="block-right">
+        <div class="block-content">
+          <img
+            src="./imagens/entrada.jpeg"
+            alt="Clínica Affectum"
+            class="block-img"
+          />
+          <div class="block-text">
+            <h2 id="T-sobre" class="autoShow">Psicanalise</h2>
+            <br />
+            <p id="sobre" class="autoShow">
+              A psicanálise é a arte de desvendar os labirintos da mente humana.
+              Compreender a si mesmo é o primeiro passo em direção à cura e ao
+              crescimento pessoal. Nossos profissionais altamente qualificados
+              estão aqui para guiá-lo nessa jornada de autoconhecimento.
+              Descubra as raízes de seus desafios emocionais, ganhe clareza e
+              liberte-se das amarras do passado. A psicanálise oferece um espaço
+              seguro para explorar suas profundezas interiores. Comece sua
+              jornada hoje e abra portas para uma vida mais plena e consciente.
+            </p>
+          </div>
+        </div>
+      </div>
+
+        <!-- 5º texto -->
+        <div class="block">
+          <div class="block-content">
+            <div class="block-text">
+              <h2 id="T-sobre" class="autoShow">Fotografia</h2>
+              <br />
+              <p id="sobre" class="autoShow">
+                A fotografia tem um poder único: o de eternizar momentos e
+                emoções, capturar a essência do que somos e nos lembrar do que
+                realmente importa. Ela vai além de simples imagens; é uma forma
+                de arte que nos conecta com o passado, nos inspira no presente e
+                nos guia para o futuro. Em nosso estúdio, acreditamos que cada
+                momento é único e merece ser registrado com todo carinho e
+                profissionalismo, nossa missão é transformar cada clique em uma
+                lembrança inesquecível.
+              </p>
+            </div>
+            <img
+              src="./imagens/placeholder4.jpg"
+              alt="Clínica Affectum"
+              class="block-img"
+            />
+          </div>
+        </div>
+      </div>
+
+    <!-- Script do Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
