@@ -51,14 +51,21 @@
     <script>
         const btnProfissional = document.getElementById('btn-profissional');
         const btnPaciente = document.getElementById('btn-paciente');
+        const loginProfissional = document.getElementById("login-profissional");
+        const loginPaciente =  document.getElementById("login-paciente");
+        const usarioMenuLogin = document.getElementById('usuario');
 
         btnProfissional.addEventListener('click', () => {
-            document.getElementById("login-profissional").style.display = 'flex';
-            document.getElementById("usuario").style.display = 'none';
+            loginProfissional.classList.add('ativo');
+            loginPaciente.style.display = 'none';
+            usarioMenuLogin.classList.add('ativo');
+            loginProfissional.querySelector('img').classList.add('ativo');
         });
         btnPaciente.addEventListener('click', () => {
-            document.getElementById("login-paciente").style.display = 'flex';
-            document.getElementById("usuario").style.display = 'none';
+            loginPaciente.classList.add('ativo');
+            loginProfissional.style.display = 'none';
+            usarioMenuLogin.classList.add('ativo');
+            loginPaciente.querySelector('img').classList.add('ativo');
         });
     </script>
 </body>
