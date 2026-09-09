@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+</head>
+<body>
+    <main>
+        <section id="usuario">
+            <button id="btn-profissional"><img src="imagens/profissional.svg" alt="">Profissional</button>
+            <button id="btn-paciente"><img src="imagens/paciente.svg" alt="">Paciente</button>
+        </section>
+        <section class="login-usuario" id="login-profissional">
+
+            <img class="fundo" src="imagens/fundo.png" alt="">
+            <div class="login">
+                
+                <div class="titulo-usuario">
+                    <h1>Bem vindo profissional</h1>
+                </div>
+                <form action="">
+                    <h2>Entrar</h2>
+                    <input placeholder="Código" type="text">
+                    <input placeholder="E-mail" type="text">
+                    <input placeholder="Senha" type="text">
+                    <input class="entrar" value="Entrar" type="submit">
+                    <div>
+                        <img src="imagens/AffectumLogo-semFundo.png" alt="">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="login-usuario" id="login-paciente">
+
+            <img class="fundo" src="imagens/fundo.png" alt="">
+            <div class="login">
+                <div>
+                    <img src="imagens/AffectumLogo.jpeg" alt="">
+                </div>
+                <div class="titulo-usuario">
+                    <h1>Bem vindo Paciente</h1>
+                </div>
+                <form action="">
+                    <h2>Entrar</h2>
+                    <input placeholder="CPF" type="text">
+                    <input placeholder="Senha" type="text">
+                    <input class="entrar" value="Entrar" type="submit">
+                </form>
+            </div>
+        </section>
+    </main>
+    <script>
+        const btnProfissional = document.getElementById('btn-profissional');
+        const btnPaciente = document.getElementById('btn-paciente');
+        const loginProfissional = document.getElementById("login-profissional");
+        const loginPaciente =  document.getElementById("login-paciente");
+        const usarioMenuLogin = document.getElementById('usuario');
+
+        btnProfissional.addEventListener('click', () => {
+            loginProfissional.classList.add('ativo');
+            loginPaciente.style.display = 'none';
+            usarioMenuLogin.classList.add('ativo');
+            loginProfissional.querySelector('img').classList.add('ativo');
+        });
+        btnPaciente.addEventListener('click', () => {
+            loginPaciente.classList.add('ativo');
+            loginProfissional.style.display = 'none';
+            usarioMenuLogin.classList.add('ativo');
+            loginPaciente.querySelector('img').classList.add('ativo');
+        });
+    </script>
+</body>
+</html>
