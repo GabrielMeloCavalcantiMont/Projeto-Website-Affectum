@@ -43,7 +43,7 @@ main{
 
 #usuario button{
     margin: 10px;
-    max-width: 260px;
+    max-width: 180px;
     width: 100%;
     padding: 35px 0;
     background-color: transparent;
@@ -62,20 +62,14 @@ main{
 
 #usuario button img{
     width: 100%;
-    max-width: 150px;
-}
-
-@media (max-width: 412px){
-    #usuario button img{
-        max-width: 80px;
-    }
+    max-width: 60px;
 }
 
 #usuario button:hover{
     background-color: var(--ciano);
 }
 
-.login-usuario img{
+.login-usuario img.fundo    {
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     max-width: 65%;
@@ -95,21 +89,34 @@ main{
     align-items: center;
     flex-direction: column;
     width: 40%;
+    margin: 20px;
 }
 
-.login div{
+.login form div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.login form div img {
+    width: 50px;
+    display: none;
+}
+
+.login .titulo-usuario{
     max-width: 85%;
     width: 100%;
     display: flex;
-    justify-content: left;
+    justify-content: center;
 }
 
-div h1{
+.login h1{
     color: white;
     margin-bottom: 4rem;
 }
 
-div form{
+.login form{
     width: 100%;
     max-width: 350px;
     color: white;
@@ -119,13 +126,13 @@ div form{
     margin-bottom: 5rem;
 }
 
-div form h2{
+.login form h2{
     margin-bottom: 10px;
+    font-size: 1.2rem;
 }
 
-div form input{
+.login form input{
     background-color: transparent;
-    max-width: 350px;
     width: 100%;
     border: 1px solid white;
     color: white;
@@ -134,16 +141,66 @@ div form input{
     outline: 0;
 }
 
-
-div form input::placeholder{
+.login form input::placeholder{
     color: rgba(255, 255, 255, 0.767);
 }
 
-div form input.entrar{
+.login form input.entrar{
     cursor: pointer;
     transition: 0.3s;
 }
 
-div form input.entrar:hover{
+.login form input.entrar:hover{
     background-color: var(--ciano);
+}
+
+@media (max-width: 800px){
+
+    main{
+        background-image: url(../imagens/fundo.png);
+        background-position: 50%;
+    }
+
+    .login .titulo-usuario{
+        max-width: fit-content;
+        width: 100%;
+        justify-content: left;
+    }
+
+    .login .titulo-usuario h1{
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .login  {
+        border: 2px solid white;
+        padding: 40px;
+        border-radius: 10px;
+        width: 350px;
+        background-color: #145780b7;
+    }
+    
+    .login form {
+        margin-bottom: 0;
+    }
+
+    .login form div img{
+        display: block;
+    }
+
+    .login-usuario{
+        justify-content: center;
+    }
+
+    .login-usuario img.fundo{
+        display: none;
+    }
+
+}
+
+@media (max-width: 412px){
+    #usuario button img{
+        max-width: 80px;
+    }
+
 }
