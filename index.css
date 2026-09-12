@@ -47,6 +47,23 @@
     animation-range: entry 0% cover 60%;
 }
 
+/* Div dos textos de entrada */
+#textos
+{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+    opacity: 0;
+    transform: translateY(10px) scale(0.5);
+}
+
+#textos.in-view
+{
+    animation: fadeUp 0.8s ease forwards;
+}
+
 /* Keyframes do texto de entrada do site */
 @keyframes fadeUp {
     from {
@@ -57,20 +74,6 @@
         opacity: 1;
         transform: translateY(0) scale(1);
     }
-}
-
-/* Div dos textos de entrada */
-#textos
-{
-    background-color: #145780;
-    height: 200px;
-    width: 90%;
-    border-radius: 30px;
-    align-items: center;
-    margin: 0 auto;
-    margin-bottom: 300px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-
 }
 
 /* Texto de título e subtítulo do site, com suas respectivas fontes, cores e tamanhos. */
@@ -87,12 +90,103 @@
 {
     text-align: center;
     font-family: 'Alegreya Sans SC', serif;
-    font-size: 30px;
-    color: #f5b55b;
-    margin-top: 20px;
+    font-size: 50px;
+    color: #ffffff;
+    margin-top: 10px;
     margin-bottom: 100px;
 }
 
+/* Sessão do carrossel infinito */
+.wrap
+{
+    width: 100%;
+    background-color: #145780;
+    padding: 60px 0;
+}
+
+.wrap h1 
+{
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f5b55b;
+    letter-spacing: 0.02rem;
+    margin-bottom: 28px;
+}
+
+/* janela que corta as informações que passam do limite da página */
+.carrossel
+{
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, white 8%, white 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, white 8%, white 92%, transparent);
+}
+
+/* Os objetos que ficam rodando */
+.trilha
+{
+    display: flex;
+    align-items: stretch;
+    width: max-content;
+    gap: 30px;
+    animation: rolar 60s linear infinite;
+}
+
+.item
+{
+    flex: 0 0 auto;
+    width: 400px;
+    height: auto;
+    background: #ffffff;
+    border: 2px solid #f5b55b;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+/* título de cada "card" do carrossel infinito */
+.item h2
+{
+    font-family: 'Special Gothic Expanded One', serif;
+    font-size: 37px;
+    color: #f5b55b;
+    margin: 0 0 12px 0;
+}
+
+/* texto de cada "card" do carrossel infinito */
+.item p
+{
+    font-family: 'Lato', serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #145780;
+    margin: 0;
+}
+
+/* Animação do carrossel infinito */
+@keyframes rolar
+{
+    from
+    { 
+        transform: translateX(0);
+    }
+    to
+    { 
+        transform: translateX(-33.3334%);
+    }
+}
+
+/* Impedir que o scroll horizontal apareça nas animações */
+.view
+{
+    overflow-x: clip;
+    overflow-y: visible;
+}
 
 /* Sessão de informações que ficam na esquerda, com animação de entrada da esquerda para a direita. */
 .block
