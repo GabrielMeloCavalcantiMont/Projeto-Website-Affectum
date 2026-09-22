@@ -1,4 +1,4 @@
-body{
+body {
     width: 100%;
     height: 100vh;
     margin: 0;
@@ -6,9 +6,17 @@ body{
     overflow: hidden;
 }
 
-main{
+main {
     width: 100%;
     height: 100vh;
+}
+
+.login-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-usuario {
@@ -19,14 +27,14 @@ main{
     height: 100vh;
     transform: translateY(100%);
     transition: transform 0.8s;
-    align-items: center;            
+    align-items: center;
 }
 
-.login-usuario.ativo{
+.login-usuario.ativo {
     transform: translateY(-100%);
 }
 
-#usuario{
+#usuario {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -37,11 +45,11 @@ main{
     transform: translateY(0);
 }
 
-#usuario.ativo{
+#usuario.ativo {
     transform: translateY(-100%);
 }
 
-#usuario button{
+#usuario button {
     margin: 10px;
     max-width: 180px;
     width: 100%;
@@ -60,16 +68,16 @@ main{
     transition: 0.3s;
 }
 
-#usuario button img{
+#usuario button img {
     width: 100%;
     max-width: 60px;
 }
 
-#usuario button:hover{
+#usuario button:hover {
     background-color: var(--ciano);
 }
 
-.login-usuario img.fundo    {
+.login-usuario img.fundo {
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     max-width: 65%;
@@ -78,12 +86,12 @@ main{
     transition: 1.2s;
 }
 
-.login-usuario img.ativo{
+.login-usuario img.ativo {
     opacity: 1;
     transform: translateX(0);
 }
 
-.login{
+.login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,7 +100,7 @@ main{
     margin: 20px;
 }
 
-.login form div{
+.login form div {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -104,19 +112,19 @@ main{
     display: none;
 }
 
-.login .titulo-usuario{
+.login .titulo-usuario {
     max-width: 85%;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.login h1{
+.login h1 {
     color: white;
     margin-bottom: 4rem;
 }
 
-.login form{
+.login form {
     width: 100%;
     max-width: 350px;
     color: white;
@@ -126,12 +134,12 @@ main{
     margin-bottom: 5rem;
 }
 
-.login form h2{
+.login form h2 {
     margin-bottom: 10px;
     font-size: 1.2rem;
 }
 
-.login form input{
+.login form input {
     background-color: transparent;
     width: 100%;
     border: 1px solid white;
@@ -141,65 +149,65 @@ main{
     outline: 0;
 }
 
-.login form input::placeholder{
+.login form input::placeholder {
     color: rgba(255, 255, 255, 0.767);
 }
 
-.login form input.entrar{
+.login form input.entrar {
     cursor: pointer;
     transition: 0.3s;
 }
 
-.login form input.entrar:hover{
+.login form input.entrar:hover {
     background-color: var(--ciano);
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
 
-    main{
+    main {
         background-image: url(../imagens/fundo.png);
         background-position: 50%;
     }
 
-    .login .titulo-usuario{
+    .login .titulo-usuario {
         max-width: fit-content;
         width: 100%;
         justify-content: left;
     }
 
-    .login .titulo-usuario h1{
+    .login .titulo-usuario h1 {
         font-size: 1.5rem;
         text-align: left;
     }
 
-    .login  {
+    .login {
         border: 2px solid white;
         padding: 40px;
         border-radius: 10px;
         width: 350px;
         background-color: #145780b7;
     }
-    
+
     .login form {
         margin-bottom: 0;
     }
 
-    .login form div img{
+    .login form div img {
         display: block;
     }
 
-    .login-usuario{
+    .login-usuario {
         justify-content: center;
     }
 
-    .login-usuario img.fundo{
+    .login-usuario img.fundo {
         display: none;
     }
 
 }
 
-@media (max-width: 412px){
-    #usuario button img{
+@media (max-width: 412px) {
+    #usuario button img {
         max-width: 80px;
     }
 

@@ -1,0 +1,9 @@
+# Dependências
+/vendor/
+/node_modules/
+
+# Arquivos de ambiente e configurações locais
+.env
+
+# Configuração sensível do banco de dados
+config/conexao.php
