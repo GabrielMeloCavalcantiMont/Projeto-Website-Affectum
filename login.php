@@ -47,9 +47,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $titulo_pagina = 'Login';
 $css_pagina = 'css/login.css';
-require 'includes/header.php';
 ?>
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+</head>
+<body>
 <div class="login-wrapper">
     <main>
         <section id="usuario">
@@ -75,11 +86,14 @@ require 'includes/header.php';
                 </div>
                 <!-- forms atualizados -->
                 <form method="POST" action="login.php?tipo=profissional">
-                    <h2>Entrar</h2>
+                    <div>
+                        <h2>Entrar</h2>
+                        <a href="index.php"><img src="imagens/seta-direita.svg" alt=""></a>
+                    </div>
                     <input placeholder="E-mail" type="email" name="email" required>
                     <input placeholder="Senha" type="password" name="senha" required>
                     <input class="entrar" value="Entrar" type="submit">
-                    <div>
+                    <div class="icon-mobile">
                         <img src="imagens/AffectumLogo-semFundo.png" alt="">
                     </div>
                 </form>
@@ -93,11 +107,14 @@ require 'includes/header.php';
                     <h1>Bem vindo Paciente</h1>
                 </div>
                 <form method="POST" action="login.php?tipo=paciente">
-                    <h2>Entrar</h2>
+                    <div>
+                        <h2>Entrar</h2>
+                        <a href="index.php"><img src="imagens/seta-direita.svg" alt=""></a>
+                    </div>
                     <input placeholder="E-mail" type="email" name="email" required>
                     <input placeholder="Senha" type="password" name="senha" required>
                     <input class="entrar" value="Entrar" type="submit">
-                    <div>
+                    <div class="icon-mobile">
                         <img src="imagens/AffectumLogo-semFundo.png" alt="">
                     </div>
                 </form>
@@ -136,4 +153,4 @@ require 'includes/header.php';
     }
 </script>
 
-<?php require 'includes/footer.php'; ?>
+        </body>
