@@ -48,7 +48,7 @@ $logado = isset($_SESSION['usuario_id']);
             <!-- botões de redirecionamento para a pagina de informações/logout do user -->
             <?php if ($logado): ?>
                 <div class="d-flex gap-2 align-items-center">
-                    <span style="color: #fff; font-family: 'Hunnin', serif;">
+                    <span style="color: #fff; ">
                         <!-- chama o usuario pelo nome, intimidade d+ -->
                         Olá, <?= htmlspecialchars($_SESSION['usuario_nome'] ?? 'Usuário') ?>
                     </span>

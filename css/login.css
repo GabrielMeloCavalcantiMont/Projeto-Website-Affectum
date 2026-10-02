@@ -19,21 +19,6 @@ main {
     align-items: center;
 }
 
-.login-usuario {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    height: 100vh;
-    transform: translateY(100%);
-    transition: transform 0.8s;
-    align-items: center;
-}
-
-.login-usuario.ativo {
-    transform: translateY(-100%);
-}
-
 #usuario {
     width: 100%;
     height: 100vh;
@@ -77,6 +62,21 @@ main {
     background-color: var(--ciano);
 }
 
+.login-usuario {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    transform: translateY(100%);
+    transition: transform 0.8s;
+    align-items: center;
+}
+
+.login-usuario.ativo {
+    transform: translateY(-100%);
+}
+
 .login-usuario img.fundo {
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
@@ -100,25 +100,6 @@ main {
     margin: 20px;
 }
 
-.login form div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.login form div img {
-    width: 50px;
-    display: none;
-}
-
-.login .titulo-usuario {
-    max-width: 85%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
 .login h1 {
     color: white;
     margin-bottom: 4rem;
@@ -134,9 +115,38 @@ main {
     margin-bottom: 5rem;
 }
 
-.login form h2 {
+.login form div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    
+}
+
+.login form div h2 {
     margin-bottom: 10px;
     font-size: 1.2rem;
+}
+
+.login form div img{
+    width: 20px;
+}
+
+.login form div.icon-mobile{
+    justify-content: center;
+}
+
+.login form div.icon-mobile img {
+    width: 50px;
+    display: none;
+}
+
+.login .titulo-usuario {
+    max-width: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .login form input {
@@ -192,7 +202,7 @@ main {
         margin-bottom: 0;
     }
 
-    .login form div img {
+    .login form div.icon-mobile img {
         display: block;
     }
 

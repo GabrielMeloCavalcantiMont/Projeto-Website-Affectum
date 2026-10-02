@@ -20,7 +20,7 @@ $consultas = $stmt->fetchAll();
 <?php if (empty($consultas)): ?>
     <p>Você não tem consultas agendadas.</p>
     <!--Vai ter pagina de agendamento? -->
-    <a href="#" class="btn" style="background:#f5b55b; color:#fff;">Agendar Consulta</a>
+    <a href="agendamento.php" class="btn" style="background:#f5b55b; color:#fff;">Agendar Consulta</a>
 
 <?php endif; ?>
 

@@ -124,12 +124,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!-- Estrutura de cadastro basico -->
 <?php
 $titulo_pagina = 'Cadastro';
-require 'includes/header.php';
+
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+</head>
+<body>
 <!-- Só puxa se o usuario clicou pra paciente ou psicologo pra ficar escrito no h2 -->
 <!-- mas não tem diferença real, é só aparencia, se na aba de psicologo o login de -->
 <!-- paciente ser feito, o paciente acessa o site como paciente normalmente-->
-<h2>Cadastro de <?= htmlspecialchars(ucfirst($tipo)) ?></h2>
+ <div class="cadastro">
 
 <?php if ($mensagem): ?>
     <p><?= htmlspecialchars($mensagem) ?></p>
@@ -137,35 +151,35 @@ require 'includes/header.php';
 <!-- Tem que mudar a aparencia desse form aqui -->
 <!-- Aos que ficam com o CSS, desejo boas sortes-->
 <form action="?tipo=<?= htmlspecialchars($tipo) ?>" method="POST">
+    <div>
+        <h2>Cadastro de <?= htmlspecialchars(ucfirst($tipo)) ?></h2>
+        <a href="index.php"><img src="imagens/seta-direita.svg" alt=""></a>
+    </div>
     <p>
-        <label>Nome</label>
-        <input type="text" name="nome" required>
+        <input type="text" name="nome" placeholder="Nome Completo" required>
     </p>
-    <p>
-        <label>E-mail</label>
-        <input type="text" name="email" required>
+    <p>     
+        <input type="text" name="email" placeholder="E-mail" required>
     </p>
-    <p>
-        <label>Senha</label>
-        <input type="password" name="senha" required minlength="8">
+    <p>  
+        <input type="password" name="senha" placeholder="Senha" required minlength="8">
     </p>
     <?php if ($tipo === 'paciente'): ?>
-        <p>
-            <label>CPF:</label>
-            <input type="text" name="cpf" required placeholder="000.000.000-00" maxlength="14">
+        <p> 
+            <input type="text" name="cpf" required placeholder="CPF:000.000.000-00" maxlength="14">
         </p>
     <?php else: ?>
         <p>
-            <label>CRP:</label>
-            <input type="text" name="crp" required placeholder="00/000000">
+            <input type="text" name="crp" required placeholder="CRP:00/000000">
         </p>
-    <?php endif; ?>
-
-    <p>
-        <button type="submit">Cadastrar</button>
-    </p>
+        <?php endif; ?>
+        
+        <div class="cadastrar-btn-container">
+            <input type="submit" value="Cadastrar">
+            <a href="login.php?tipo=<?= htmlspecialchars($tipo) ?>">Já tem conta? Faça login</a>
+        </div>
 </form>
 
-<p><a href="login.php?tipo=<?= htmlspecialchars($tipo) ?>">Já tem conta? Faça login</a></p>
+ </div>
 
-<?php require 'includes/footer.php'; ?>
+    </body>
