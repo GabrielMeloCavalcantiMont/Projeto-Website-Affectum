@@ -59,7 +59,7 @@ $logado = isset($_SESSION['usuario_id']);
                 <!-- Já separando o tipo de usuario-->
             <?php else: ?>
                 <div class="d-flex gap-2 align-items-center">
-                    <a href="escolher_cadastro.php" class="btn">Cadastre-se</a>
+                    <!-- <a href="escolher_cadastro.php" class="btn">Cadastre-se</a> -->
                     <a href="login.php" class="btn">Login</a>                    
                 </div>
             <?php endif; ?>

@@ -20,7 +20,26 @@ $consultas = $stmt->fetchAll();
 <?php if (empty($consultas)): ?>
     <p>Você não tem consultas agendadas.</p>
     <!--Vai ter pagina de agendamento? -->
-    <a href="agendamento.php" class="btn" style="background:#f5b55b; color:#fff;">Agendar Consulta</a>
+    <button id="btn-agendar" class="btn">Agendar Consulta</button>
+
+    <div id="modal-agendar" class="modal-agenda">
+        <div id="modal-agendar-close" class="close">X</div>
+        <form action="">
+        <h2>Agende sua consulta</h2>
+        <div>
+            <input type="date" >
+            <input type="time">
+       
+            <select name="" id="">
+                <option value="">Selecione o profissional</option>
+            </select>
+            <select name="" id="">
+                <option value="">Selecione o serviço</option>
+            </select>
+        </div>
+        <input type="submit" class="botao-enviar" value="Agendar">
+    </form>
+    </div>
 
 <?php endif; ?>
 
@@ -31,3 +50,15 @@ $consultas = $stmt->fetchAll();
 </h2>
 <p><strong>Nome:</strong> <?= htmlspecialchars($_SESSION['usuario_nome']) ?></p>
 <p><strong>E-mail:</strong> <?= htmlspecialchars($_SESSION['usuario_email']) ?></p>
+
+<script>
+    const btnAgendar = document.getElementById('btn-agendar');
+    const modalAgendar = document.getElementById('modal-agendar');
+    const btnModalAgendarClose = document.getElementById('modal-agendar-close');
+    btnAgendar.addEventListener('click', () => {
+        modalAgendar.style.display = 'block';
+    });
+    btnModalAgendarClose.addEventListener('click', () => {
+        modalAgendar.style.display = 'none';
+    });
+</script>

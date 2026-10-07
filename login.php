@@ -113,6 +113,7 @@ $css_pagina = 'css/login.css';
                     </div>
                     <input placeholder="E-mail" type="email" name="email" required>
                     <input placeholder="Senha" type="password" name="senha" required>
+                    <p>Não tem uma conta? <a href="cadastro.php?tipo=paciente">Faça seu cadastro</a></p>
                     <input class="entrar" value="Entrar" type="submit">
                     <div class="icon-mobile">
                         <img src="imagens/AffectumLogo-semFundo.png" alt="">

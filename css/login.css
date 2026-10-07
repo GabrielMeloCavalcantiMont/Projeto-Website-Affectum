@@ -159,6 +159,22 @@ main {
     outline: 0;
 }
 
+.login form p{
+    font-size: 12px;
+    margin-left: 0.7rem;
+    margin-bottom: 10px;
+}
+
+.login form p a{
+    /* text-decoration: none; */
+    color: var(--ciano);
+    transition: 0.15s;
+}
+
+.login form p a:hover{
+    color: #4cc7cf;
+}
+
 .login form input::placeholder {
     color: rgba(255, 255, 255, 0.767);
 }
