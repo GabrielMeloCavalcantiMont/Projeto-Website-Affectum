@@ -63,6 +63,7 @@ $css_pagina = 'css/login.css';
 <body>
 <div class="login-wrapper">
     <main>
+        <a class="voltar" href="index.php"><img src="imagens/seta-direita.svg" alt=""></a>
         <section id="usuario">
             <button id="btn-profissional"><img src="imagens/profissional.svg" alt="">Profissional</button>
             <button id="btn-paciente"><img src="imagens/paciente.svg" alt="">Paciente</button>
@@ -88,7 +89,7 @@ $css_pagina = 'css/login.css';
                 <form method="POST" action="login.php?tipo=profissional">
                     <div>
                         <h2>Entrar</h2>
-                        <a href="index.php"><img src="imagens/seta-direita.svg" alt=""></a>
+                        <!-- <a href="index.php"><img src="imagens/seta-direita.svg" alt=""></a> -->
                     </div>
                     <input placeholder="E-mail" type="email" name="email" required>
                     <input placeholder="Senha" type="password" name="senha" required>
@@ -109,7 +110,7 @@ $css_pagina = 'css/login.css';
                 <form method="POST" action="login.php?tipo=paciente">
                     <div>
                         <h2>Entrar</h2>
-                        <a href="index.php"><img src="imagens/seta-direita.svg" alt=""></a>
+                        <!-- <a href="index.php"><img src="imagens/seta-direita.svg" alt=""></a> -->
                     </div>
                     <input placeholder="E-mail" type="email" name="email" required>
                     <input placeholder="Senha" type="password" name="senha" required>
