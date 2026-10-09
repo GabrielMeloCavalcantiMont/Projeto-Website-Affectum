@@ -12,7 +12,7 @@ require 'config/conexao.php';
 
 $titulo_pagina = "Meu painel";
 $tipo = $_SESSION['tipo_perfil'];
-$css_pagina = 'css/agendamento.css';
+$css_pagina = 'css/paciente.css';
 
 require 'includes/header.php';
 ?>
