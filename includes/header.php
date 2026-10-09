@@ -35,35 +35,49 @@ $logado = isset($_SESSION['usuario_id']);
 
 <body>
     <!--NAVBAR principal-->
-    <nav class="navbar navbar-expand-lg" style="background-color: #145780">
+    <nav class="navbar navbar-expand-lg" style="background-color: #145780" data-bs-theme="dark">
         <div class="container-fluid">
             <a href="index.php">
                 <img
                     src="imagens/AffectumLogo.jpeg"
                     alt="Affectum Logo"
-                    width="100"
-                    height="75"
+                    width="80"
+                    height="60"
                     class="d-inline-block align-text-top" />
             </a>
-            <!-- botões de redirecionamento para a pagina de informações/logout do user -->
-            <?php if ($logado): ?>
-                <div class="d-flex gap-2 align-items-center">
-                    <span style="color: #fff; ">
+
+            <!-- Botão hambúrguer para mobile -->
+             <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="menuPrincipal">
+                <div class="d-flex flex-column flex-lg-row gap-2 align-items-lg-center">
+
+                    <?php if ($logado): ?>
                         <!-- chama o usuario pelo nome, intimidade d+ -->
-                        Olá, <?= htmlspecialchars($_SESSION['usuario_nome'] ?? 'Usuário') ?>
-                    </span>
-                    <a href="dashboard.php" class="btn">Meu Painel</a>
-                    <a href="logout.php" class="btn">Sair</a>
+                         <span style="color: #fff;">
+                            Olá, <?= htmlspecialchars($_SESSION['usuario_nome'] ?? 'Usuário') ?>
+                         </span>
+                    <?php endif; ?>
+
+                    <!-- agora os links das outras páginas são públicos, não são limitados apenas a quem tem login -->
+                     <a href="servicos.php" class="nav-link-clean">Nossos serviços</a>
+                     <a href="sobre.php" class="nav-link-clean">Sobre nós</a>
+                     <a href="profissional.php" class="nav-link-clean">Profissionais</a>
+                     <a href="agendamento.php" class="nav-link-clean">Agendamento</a>
+
+                     <?php if ($logado): ?>
+                        <!-- Só para usuários logados -->
+                        <a href="dashboard.php" class="nav-link-clean">Minha conta</a>
+                        <a href="logout.php" class="nav-link-clean">Sair</a>
+                    <?php else: ?>
+                        <a href="login.php" class="btn-login">Login</a>
+                    <?php endif; ?>
                 </div>
-                <!--Botão de login-->
-                <!-- Já separando o tipo de usuario-->
-            <?php else: ?>
-                <div class="d-flex gap-2 align-items-center">
-                    <a href="escolher_cadastro.php" class="btn">Cadastre-se</a>
-                    <a href="login.php" class="btn">Login</a>                    
-                </div>
-            <?php endif; ?>
-        </div>
+            </div>
         </div>
     </nav>
     <!-- nem body nem html são fechados, isso fica no footer -->

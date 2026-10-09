@@ -1,24 +1,65 @@
 /* Botão de Login */
-.btn 
+.btn-login
 {
     border: 2px solid #ffffff;
     background-color: #f5b55b;
     color: #ffffff;
     font-family: 'Huninn', serif;
-    font-size: 17px;
+    font-size: 15px;
     border-radius: 30px;
-    width: 150px;
-    height: 40px;
+    width: 90px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
 /* Hover do botão de login */
-.btn:hover
+.btn-login:hover
 {
     background-color: #d4943a;
     border-color: #d4943a;
     color: #fff;
     border: 2px solid #ffffff;
+}
+
+/* outros botões de navegação */
+a.nav-link-clean
+{
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    white-space: nowrap;
+}
+
+/* barrinha de hover dos botões de navegação */
+a.nav-link-clean::after 
+{
+    content: "";
+    position: absolute;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.2rem;
+    height: 2px;
+    background-color: #f2b45a;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+}
+
+a.nav-link-clean:hover,
+a.nav-link-clean:focus
+{
+    color: #fff;
+}
+
+.nav-link-clean:hover::after,
+.nav-link-clean:focus::after,
+.nav-link-clean.active::after
+{
+    transform: scaleX(1);
 }
 
 /* Carrosel e sua shadow box */
@@ -42,26 +83,50 @@
 /* Animação de entrada do texto */
 .autoShow
 {
-    animation: fadeUp both;
-    animation-timeline: view(10% 5%);
-    animation-range: entry 0% cover 60%;
-}
-
-/* Div dos textos de entrada */
-#textos
-{
-    width: 90%;
-    margin: 0 auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    
     opacity: 0;
     transform: translateY(10px) scale(0.5);
 }
 
-#textos.in-view
+.autoShow.in-view
 {
     animation: fadeUp 0.8s ease forwards;
+}
+
+/* HERO */
+.hero
+{
+    background-color: #fff;
+    min-height: 630px;
+    padding: clamp(40px, 8vw, 100px) 0;
+    display: flex;
+    align-items: center;
+}
+
+#Titulo
+{
+    font-family: 'Special Gothic Expanded One', serif;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    color: #f5b55b;
+    margin: 0 0 1rem 0;
+    text-wrap: balance;
+}
+
+#Subtitulo
+{
+    font-family: 'Alegreya Sans SC', serif;
+    font-size: clamp(1rem, 1.8vw, 1.5rem);
+    color: #145780;
+    text-align: center;
+    text-wrap: balance;
+    margin: 0,
+}
+
+.hero-logo
+{
+    width: 100%;
+    max-width: 450px;
+    height: auto;
 }
 
 /* Keyframes do texto de entrada do site */
@@ -76,24 +141,24 @@
     }
 }
 
-/* Texto de título e subtítulo do site, com suas respectivas fontes, cores e tamanhos. */
-#Titulo
+#TSobre
 {
     text-align: center;
     font-family: 'Special Gothic Expanded One', serif;
-    font-size: 90px;
+    font-size: 70px;
     color: #f5b55b;
-    margin-top: 100px;
+    margin-top: 100px;   
 }
 
-#Subtitulo
+#Subtitulo-sobre
 {
     text-align: center;
-    font-family: 'Alegreya Sans SC', serif;
-    font-size: 50px;
+    font-family: 'Lato', serif;
+    font-size: 30px;
     color: #ffffff;
-    margin-top: 10px;
-    margin-bottom: 100px;
+    max-width: 1500px;
+    margin: 50px auto 100px auto;
+    padding: 0 20px;
 }
 
 /* Sessão do carrossel infinito */
@@ -191,9 +256,9 @@
 /* Sessão de informações que ficam na esquerda, com animação de entrada da esquerda para a direita. */
 .block
 {
-    animation: appear linear;
-    animation-timeline: view(auto auto);
-    animation-range: entry 0% cover 30%;
+    opacity: 0;
+    transform: translateX(-900px);
+
     width: 80%;
     max-width: 900px;
     height: auto;
@@ -201,6 +266,11 @@
     border-radius: 30px;
     margin: 100px auto 100px 10%;
     padding: 30px;
+}
+
+.block.in-view
+{
+    animation: appear 0.8s ease forwards;
 }
 
 /* Tudo o que está no block */
@@ -254,9 +324,15 @@
     object-fit: cover;
     object-position: top;
     border-radius: 30px;
-    animation: imageReveal both;
-    animation-timeline: view(auto auto);
-    animation-range: entry 0% cover 30%;
+    filter: saturate(0) contrast(4) brightness(.1) blur(5px);
+    opacity: 0;
+    scale: .95;
+    translate: 0 4rem;
+}
+
+.block-img.in-view
+{
+    animation: imageReveal 0.8s ease forwards;
 }
 
 /* Keyframes das imagens dos textos que surgem */
@@ -290,9 +366,9 @@
 /* Sessão de informações que ficam na direita, com animação de entrada da direita para a esquerda. */
 .block-right
 {
-    animation: appear-right linear;
-    animation-timeline: view(auto auto);
-    animation-range: entry 0% cover 30%;
+    opacity: 0;
+    transform: translateX(900px);
+
     width: 80%;
     max-width: 900px;
     height: auto;
@@ -300,6 +376,11 @@
     border-radius: 30px;
     margin: 100px 10% 100px auto;
     padding: 30px;
+}
+
+.block-right.in-view
+{
+    animation: appear-right 0.8s ease forwards;
 }
 
 /* Keyframes dos elementos que aparecem na tela, com animação de entrada da direita para a esquerda. */
@@ -358,25 +439,6 @@
 
 /* Mobile */
 @media (max-width: 768px) {
-
-    #Titulo
-    {
-        font-size: 40px;
-        margin-top: 40px;
-    }
-
-    #Subtitulo
-    {
-        font-size: 18px;
-        margin-bottom: 40px;
-    }
-
-    #textos
-    {
-        height: auto;
-        padding: 20px 0;
-        margin-bottom: 100px;
-    }
 
     .block,
     .block-right

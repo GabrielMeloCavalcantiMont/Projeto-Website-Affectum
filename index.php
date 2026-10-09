@@ -8,72 +8,41 @@ require 'includes/header.php';
 
 <!-- head e body tá aqui em cima -->
 <!-- pode mandar todo conteudo da pagina aqui em baixo-->
-<!-- Carrosel -->
-<div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators">
-    <button
-      type="button"
-      data-bs-target="#carouselExampleIndicators"
-      data-bs-slide-to="0"
-      class="active"
-      aria-current="true"
-      aria-label="Slide 1"></button>
-    <button
-      type="button"
-      data-bs-target="#carouselExampleIndicators"
-      data-bs-slide-to="1"
-      aria-label="Slide 2"></button>
-    <button
-      type="button"
-      data-bs-target="#carouselExampleIndicators"
-      data-bs-slide-to="2"
-      aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./imagens/entrada.jpeg" class="d-block" alt="Clínica" />
-    </div>
-    <div class="carousel-item">
-      <img
-        src="./imagens/clinica.jpeg"
-        class="d-block"
-        alt="Sala principal" />
-    </div>
-    <div class="carousel-item">
-      <img
-        src="./imagens/placeholder3.jpg"
-        class="d-block"
-        alt="Placeholder 3" />
+
+<!-- Textos de entrada/HERO -->
+<section class="hero">
+  <div class="container-xl">
+    <div class="row align-items-center g-4">
+
+    <!-- texto vai ficar embaixo da logo no mobile, e no desktop, vai ficar à esquerda -->
+     <div class="col-12 col-lg-7 order-lg-1 text-center text-lg-start">
+        <h1 id="Titulo" class="autoShow">Seja bem-vendo à Affectum</h1>
+        <p id="Subtitulo" class="autoShow">
+          Transformando histórias, cuidamos de almas e damos voz à sua essência.
+        </p>
+      </div>
+
+        <div class="col-12 col-lg-5 order-1 order-lg-2 text-center">
+          <img class="hero-logo autoShow" src="imagens/AffectumLogo-semFundo.png" alt="Logo Affectum" />
+        </div>
+
     </div>
   </div>
-  <button
-    class="carousel-control-prev"
-    type="button"
-    data-bs-target="#carouselExampleIndicators"
-    data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button
-    class="carousel-control-next"
-    type="button"
-    data-bs-target="#carouselExampleIndicators"
-    data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+</section>
+<br><br>
 
 <!-- Carrossel infinito -->
 <div class="wrap">
 
-  <!-- Textos de entrada -->
-  <div id="textos">
-    <h1 id="Titulo" class="autoShow">Seja bem vindo à Affectum</h1>
-    <br />
-    <p id="Subtitulo" class="autoShow">
-      Transformamos histórias, cuidamos de almas e damos voz à sua essência.
-    </p>
+  <div>
+    <h2 id="TSobre">Sobre a Affectum</h2>
+  <p id="Subtitulo-sobre">Bem-vindos à Clínica Affectum, um espaço de cuidado integral
+          inaugurado em 1 de agosto de 2022. Aqui, acreditamos que a saúde
+          emocional, psicológica e física é para todas as idades. Nossa
+          equipe dedicada está comprometida em ajudar você a alcançar uma
+          vida mais saudável em todos esses aspectos. Seja você uma criança,
+          adulto ou idoso, estamos aqui para apoiá-lo em sua jornada para o
+          bem-estar. Sua saúde é nossa prioridade. </p>
   </div>
 
   <div class="carrossel">
@@ -241,30 +210,65 @@ require 'includes/header.php';
   </div>
 </div>
 
-<!-- Textos sobre a clínica -->
-<div class="view">
-  <div class="block">
-    <div class="block-content">
-      <div class="block-text">
-        <h2 id="T-sobre" class="autoShow">Sobre a Affectum</h2>
-        <br />
-        <p id="sobre" class="autoShow">
-          Bem-vindos à Clínica Affectum, um espaço de cuidado integral
-          inaugurado em 1 de agosto de 2022. Aqui, acreditamos que a saúde
-          emocional, psicológica e física é para todas as idades. Nossa
-          equipe dedicada está comprometida em ajudar você a alcançar uma
-          vida mais saudável em todos esses aspectos. Seja você uma criança,
-          adulto ou idoso, estamos aqui para apoiá-lo em sua jornada para o
-          bem-estar. Sua saúde é nossa prioridade.
-        </p>
-      </div>
+<!-- Carrosel -->
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./imagens/entrada.jpeg" class="d-block" alt="Clínica" />
+    </div>
+    <div class="carousel-item">
       <img
-        src="./imagens/placeholder4.jpg"
-        alt="Clínica Affectum"
-        class="block-img" />
+        src="./imagens/clinica.jpeg"
+        class="d-block"
+        alt="Sala principal" />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="./imagens/placeholder3.jpg"
+        class="d-block"
+        alt="Placeholder 3" />
     </div>
   </div>
-  <!-- 2º texto -->
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Textos sobre a clínica -->
+<div class="view">
+  <!-- 1º texto -->
   <div class="block-right">
     <div class="block-content">
       <img
@@ -287,7 +291,7 @@ require 'includes/header.php';
       </div>
     </div>
   </div>
-  <!-- 3º texto -->
+  <!-- 2º texto -->
   <div class="block">
     <div class="block-content">
       <div class="block-text">
@@ -310,7 +314,7 @@ require 'includes/header.php';
     </div>
   </div>
 
-  <!-- 4º texto -->
+  <!-- 3º texto -->
   <div class="block-right">
     <div class="block-content">
       <img
@@ -332,7 +336,7 @@ require 'includes/header.php';
     </div>
   </div>
 
-  <!-- 5º texto -->
+  <!-- 4º texto -->
   <div class="block">
     <div class="block-content">
       <div class="block-text">
@@ -355,7 +359,7 @@ require 'includes/header.php';
     </div>
   </div>
 
-  <!-- 6º texto -->
+  <!-- 5º texto -->
   <div class="block-right">
     <div class="block-content">
       <img
@@ -380,7 +384,7 @@ require 'includes/header.php';
     </div>
   </div>
 
-  <!-- 7º texto -->
+  <!-- 6º texto -->
   <div class="block">
     <div class="block-content">
       <div class="block-text">
@@ -408,8 +412,6 @@ require 'includes/header.php';
 <!-- esse script mantem aqui não vai pro footer -->
 <!-- por que é especifico da pagina -->
 <script>
-  const alvo = document.querySelector('#textos');
-
   const observer = new IntersectionObserver(
     (entradas) => {
       entradas.forEach((entrada) => {
@@ -418,12 +420,13 @@ require 'includes/header.php';
           observer.unobserve(entrada.target);
         }
       });
-    }, {
-      threshold: 0.05
-    }
+    },
+      { threshold: 0.05 }
   )
 
-  observer.observe(alvo);
+  document
+    .querySelectorAll('.autoShow, .block, .block-right, .block-img')
+    .forEach((el) => observer.observe(el));
 </script>
 <!-- esse php no fim tá com o footer, script bootstrap, </body>, </html> -->
 <?php require 'includes/footer.php'; ?>
