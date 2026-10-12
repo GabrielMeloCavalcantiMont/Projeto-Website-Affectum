@@ -448,13 +448,34 @@ a.nav-link-clean:focus
 
 /* Mobile */
 @media (max-width: 768px) {
-
+    
     .block,
     .block-right
     {
         width: 90%;
         margin: 60px auto;
         padding: 20px;
+    }
+
+    .autoShow,
+    .block,
+    .block-right,
+    .block-img
+    {
+        opacity: 1;
+        transform: none;
+        translate: none;
+        scale: none;
+        filter: none;
+        animation: none;
+    }
+
+    .autoShow.in-view,
+    .block.in-view,
+    .block-right.in-view,
+    .block-img.in-view
+    {
+        animation: none;
     }
 
     .block-content
