@@ -26,6 +26,14 @@ $logado = isset($_SESSION['usuario_id']);
     <link
         href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Amethysta&family=Huninn&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Special+Gothic+Expanded+One&display=swap"
         rel="stylesheet" />
+
+    <link rel='stylesheet' href='dist/skeleton.css' />
+    <link rel='stylesheet' href='dist/themes/classic/theme.css' />
+    <link rel='stylesheet' href='dist/themes/classic/palette.css' />
+
+    <script src='dist/fullcalendar.global.js'></script>
+    <script src='dist/themes/classic/global.js'></script>
+
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="css/style.css" />
     <?php if (!empty($css_pagina)): ?>
@@ -52,7 +60,7 @@ $logado = isset($_SESSION['usuario_id']);
             </a>
 
             <!-- Botão hambúrguer para mobile -->
-             <button class="navbar-toggler" type="button"
+            <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
                 aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
                 <span class="navbar-toggler-icon"></span>
@@ -63,9 +71,9 @@ $logado = isset($_SESSION['usuario_id']);
 
                     <?php if ($logado): ?>
                         <!-- chama o usuario pelo nome, intimidade d+ -->
-                         <span style="color: #fff;">
+                        <span style="color: #fff;">
                             Olá, <?= htmlspecialchars($_SESSION['usuario_nome'] ?? 'Usuário') ?>
-                         </span>
+                        </span>
                     <?php endif; ?>
 
                     <!-- agora os links das outras páginas são públicos, não são limitados apenas a quem tem login -->
@@ -73,7 +81,7 @@ $logado = isset($_SESSION['usuario_id']);
                      <a href="nos.php" class="nav-link-clean">Nós</a>
                      <a href="agendamento.php" class="nav-link-clean">Agendamento</a>
 
-                     <?php if ($logado): ?>
+                    <?php if ($logado): ?>
                         <!-- Só para usuários logados -->
                         <a href="dashboard.php" class="nav-link-clean">Minha conta</a>
                         <a href="logout.php" class="nav-link-clean">Sair</a>

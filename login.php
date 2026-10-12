@@ -50,6 +50,7 @@ $css_pagina = 'css/login.css';
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,97 +61,100 @@ $css_pagina = 'css/login.css';
     <link rel="stylesheet" href="css/style.css">
     <title>Login</title>
 </head>
-<body>
-<div class="login-wrapper">
-    <main>
-        <section id="usuario">
-            <button id="btn-profissional"><img src="imagens/profissional.svg" alt="">Profissional</button>
-            <button id="btn-paciente"><img src="imagens/paciente.svg" alt="">Paciente</button>
-        </section>
 
-        <?php if ($mensagem): ?>
-            <div style="max-width: 400px; margin: 20px auto; padding: 10px;
+<body>
+    <div class="login-wrapper">
+        <main>
+            <a class="voltar" href="index.php"><img src="imagens/seta-direita.svg" alt=""></a>
+            <section id="usuario">
+                <button id="btn-profissional"><img src="imagens/profissional.svg" alt="">Profissional</button>
+                <button id="btn-paciente"><img src="imagens/paciente.svg" alt="">Paciente</button>
+            </section>
+
+            <?php if ($mensagem): ?>
+                <div style="max-width: 400px; margin: 20px auto; padding: 10px;
                         background: #f8d7da;color: #721c24; border-radius: 8px;
                         font-family: 'Huninn', serif; text-align: center;">
-                <?= htmlspecialchars($mensagem) ?>
-            </div>
-
-        <?php endif; ?>
-
-        <section class="login-usuario" id="login-profissional">
-            <img class="fundo" src="imagens/fundo.png" alt="">
-            <div class="login">
-                <!-- Login padrão pra qualquer usuario-->
-                <div class="titulo-usuario">
-                    <h1>Bem vindo profissional</h1>
+                    <?= htmlspecialchars($mensagem) ?>
                 </div>
-                <!-- forms atualizados -->
-                <form method="POST" action="login.php?tipo=profissional">
-                    <div>
-                        <h2>Entrar</h2>
-                        <a href="index.php"><img src="imagens/seta-direita.svg" alt=""></a>
-                    </div>
-                    <input placeholder="E-mail" type="email" name="email" required>
-                    <input placeholder="Senha" type="password" name="senha" required>
-                    <input class="entrar" value="Entrar" type="submit">
-                    <div class="icon-mobile">
-                        <img src="imagens/AffectumLogo-semFundo.png" alt="">
-                    </div>
-                </form>
-            </div>
-        </section>
 
-        <section class="login-usuario" id="login-paciente">
-            <img class="fundo" src="imagens/fundo.png" alt="">
-            <div class="login">
-                <div class="titulo-usuario">
-                    <h1>Bem vindo Paciente</h1>
+            <?php endif; ?>
+
+            <section class="login-usuario" id="login-profissional">
+                <img class="fundo" src="imagens/fundo.png" alt="">
+                <div class="login">
+                    <!-- Login padrão pra qualquer usuario-->
+                    <div class="titulo-usuario">
+                        <h1>Bem vindo profissional</h1>
+                    </div>
+                    <!-- forms atualizados -->
+                    <form method="POST" action="login.php?tipo=profissional">
+                        <div>
+                            <h2>Entrar</h2>
+                            <!-- <a href="index.php"><img src="imagens/seta-direita.svg" alt=""></a> -->
+                        </div>
+                        <input placeholder="E-mail" type="email" name="email" required>
+                        <input placeholder="Senha" type="password" name="senha" required>
+                        <input class="entrar" value="Entrar" type="submit">
+                        <div class="icon-mobile">
+                            <img src="imagens/AffectumLogo-semFundo.png" alt="">
+                        </div>
+                    </form>
                 </div>
-                <form method="POST" action="login.php?tipo=paciente">
-                    <div>
-                        <h2>Entrar</h2>
-                        <a href="index.php"><img src="imagens/seta-direita.svg" alt=""></a>
+            </section>
+
+            <section class="login-usuario" id="login-paciente">
+                <img class="fundo" src="imagens/fundo.png" alt="">
+                <div class="login">
+                    <div class="titulo-usuario">
+                        <h1>Bem vindo Paciente</h1>
                     </div>
-                    <input placeholder="E-mail" type="email" name="email" required>
-                    <input placeholder="Senha" type="password" name="senha" required>
-                    <input class="entrar" value="Entrar" type="submit">
-                    <div class="icon-mobile">
-                        <img src="imagens/AffectumLogo-semFundo.png" alt="">
-                    </div>
-                </form>
-            </div>
-        </section>
-    </main>
-</div>
+                    <form method="POST" action="login.php?tipo=paciente">
+                        <div>
+                            <h2>Entrar</h2>
+                            <!-- <a href="index.php"><img src="imagens/seta-direita.svg" alt=""></a> -->
+                        </div>
+                        <input placeholder="E-mail" type="email" name="email" required>
+                        <input placeholder="Senha" type="password" name="senha" required>
+                        <p>Não tem uma conta? <a href="cadastro.php?tipo=paciente">Faça seu cadastro</a></p>
+                        <input class="entrar" value="Entrar" type="submit">
+                        <div class="icon-mobile">
+                            <img src="imagens/AffectumLogo-semFundo.png" alt="">
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
 
-<script>
-    const btnProfissional = document.getElementById('btn-profissional');
-    const btnPaciente = document.getElementById('btn-paciente');
-    const loginProfissional = document.getElementById("login-profissional");
-    const loginPaciente = document.getElementById("login-paciente");
-    const usarioMenuLogin = document.getElementById('usuario');
+    <script>
+        const btnProfissional = document.getElementById('btn-profissional');
+        const btnPaciente = document.getElementById('btn-paciente');
+        const loginProfissional = document.getElementById("login-profissional");
+        const loginPaciente = document.getElementById("login-paciente");
+        const usarioMenuLogin = document.getElementById('usuario');
 
-    btnProfissional.addEventListener('click', () => {
-        loginProfissional.classList.add('ativo');
-        loginPaciente.style.display = 'none';
-        usarioMenuLogin.classList.add('ativo');
-        loginProfissional.querySelector('img').classList.add('ativo');
-        history.pushState({}, '', 'login.php?tipo=profissional');
-    });
-    btnPaciente.addEventListener('click', () => {
-        loginPaciente.classList.add('ativo');
-        loginProfissional.style.display = 'none';
-        usarioMenuLogin.classList.add('ativo');
-        loginPaciente.querySelector('img').classList.add('ativo');
-        history.pushState({}, '', 'login.php?tipo=paciente');
-    });
+        btnProfissional.addEventListener('click', () => {
+            loginProfissional.classList.add('ativo');
+            loginPaciente.style.display = 'none';
+            usarioMenuLogin.classList.add('ativo');
+            loginProfissional.querySelector('img').classList.add('ativo');
+            history.pushState({}, '', 'login.php?tipo=profissional');
+        });
+        btnPaciente.addEventListener('click', () => {
+            loginPaciente.classList.add('ativo');
+            loginProfissional.style.display = 'none';
+            usarioMenuLogin.classList.add('ativo');
+            loginPaciente.querySelector('img').classList.add('ativo');
+            history.pushState({}, '', 'login.php?tipo=paciente');
+        });
 
-    const abaInicial = "<?= htmlspecialchars($aba_ativa) ?>";
-    if (abaInicial === 'profissional') {
-        btnProfissional.click();
-    } else if (abaInicial === 'paciente') {
-        btnPaciente.click();
-    }
-</script>
+        const abaInicial = "<?= htmlspecialchars($aba_ativa) ?>";
+        if (abaInicial === 'profissional') {
+            btnProfissional.click();
+        } else if (abaInicial === 'paciente') {
+            btnPaciente.click();
+        }
+    </script>
 
-        </body>
+</body>
