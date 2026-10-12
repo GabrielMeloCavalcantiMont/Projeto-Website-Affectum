@@ -14,17 +14,17 @@ require 'includes/header.php';
   <div class="container-xl">
     <div class="row align-items-center g-4">
 
-    <!-- texto vai ficar embaixo da logo no mobile, e no desktop, vai ficar à esquerda -->
-     <div class="col-12 col-lg-7 order-lg-1 text-center text-lg-start">
+      <!-- texto vai ficar embaixo da logo no mobile, e no desktop, vai ficar à esquerda -->
+      <div class="col-12 col-lg-7 order-lg-1 text-center text-lg-start">
         <h1 id="Titulo" class="autoShow">Seja bem-vendo à Affectum</h1>
         <p id="Subtitulo" class="autoShow">
           Transformando histórias, cuidamos de almas e damos voz à sua essência.
         </p>
       </div>
 
-        <div class="col-12 col-lg-5 order-1 order-lg-2 text-center">
-          <img class="hero-logo autoShow" src="imagens/AffectumLogo-semFundo.png" alt="Logo Affectum" />
-        </div>
+      <div class="col-12 col-lg-5 order-1 order-lg-2 text-center">
+        <img class="hero-logo autoShow" src="imagens/AffectumLogo-semFundo.png" alt="Logo Affectum" />
+      </div>
 
     </div>
   </div>
@@ -36,13 +36,13 @@ require 'includes/header.php';
 
   <div>
     <h2 id="TSobre">Sobre a Affectum</h2>
-  <p id="Subtitulo-sobre">Bem-vindos à Clínica Affectum, um espaço de cuidado integral
-          inaugurado em 1 de agosto de 2022. Aqui, acreditamos que a saúde
-          emocional, psicológica e física é para todas as idades. Nossa
-          equipe dedicada está comprometida em ajudar você a alcançar uma
-          vida mais saudável em todos esses aspectos. Seja você uma criança,
-          adulto ou idoso, estamos aqui para apoiá-lo em sua jornada para o
-          bem-estar. Sua saúde é nossa prioridade. </p>
+    <p id="Subtitulo-sobre">Bem-vindos à Clínica Affectum, um espaço de cuidado integral
+      inaugurado em 1 de agosto de 2022. Aqui, acreditamos que a saúde
+      emocional, psicológica e física é para todas as idades. Nossa
+      equipe dedicada está comprometida em ajudar você a alcançar uma
+      vida mais saudável em todos esses aspectos. Seja você uma criança,
+      adulto ou idoso, estamos aqui para apoiá-lo em sua jornada para o
+      bem-estar. Sua saúde é nossa prioridade. </p>
   </div>
 
   <div class="carrossel">
@@ -420,8 +420,9 @@ require 'includes/header.php';
           observer.unobserve(entrada.target);
         }
       });
-    },
-      { threshold: 0.05 }
+    }, {
+      threshold: 0.05
+    }
   )
 
   document

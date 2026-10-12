@@ -49,7 +49,7 @@ endif;
           modalInfoConsulta.style.display = 'none';
           consultaSelecionada = null;
         }
-      }); 
+      });
 
 
       let calendarEl = document.getElementById('calendar');

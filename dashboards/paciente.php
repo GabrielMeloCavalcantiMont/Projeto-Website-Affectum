@@ -19,50 +19,50 @@ $consultas = $stmt->fetchAll();
 </h2>
 
 
-<?php if (/*empty($consultas) comentei pra testar o visual quando tiver consulta */ true){ ?>
+<?php if (/*empty($consultas) comentei pra testar o visual quando tiver consulta */true) { ?>
     <p>Você não tem consultas agendadas.</p>
     <!--Vai ter pagina de agendamento? -->
     <button id="btn-agendar" class="btn">Agendar Consulta</button>
 
 <?php } else { ?>
 
-<p>Aqui estão suas consultas agendadas</p>
+    <p>Aqui estão suas consultas agendadas</p>
 
-<!-- Card de consulta -->
-<section class="consultas">
-    <!-- Tem dois inserts no agendamento, na teoria era pra aparecer, mas não aparece -->
-    <?php foreach ($consultas as $consulta): ?>
-    
-    <div class="card-consulta">
-        <div class="consulta-data-info">
-            <div class="data-info">
-                <div class="data"><img src="imagens/calendario.svg" alt=""> <span>Hoje</span></div>
-                <div class="divisoria">|</div>
-                <div class="hora"><img src="imagens/relogio.svg" alt=""> 14:00</div>
+    <!-- Card de consulta -->
+    <section class="consultas">
+        <!-- Tem dois inserts no agendamento, na teoria era pra aparecer, mas não aparece -->
+        <?php foreach ($consultas as $consulta): ?>
+
+            <div class="card-consulta">
+                <div class="consulta-data-info">
+                    <div class="data-info">
+                        <div class="data"><img src="imagens/calendario.svg" alt=""> <span>Hoje</span></div>
+                        <div class="divisoria">|</div>
+                        <div class="hora"><img src="imagens/relogio.svg" alt=""> 14:00</div>
+                    </div>
+                    <!-- mudando o estilo dependendo do status da consulta   -->
+                    <?php if (true) { ?>
+
+                        <div class="status confirmada"><img src="imagens/check.svg" alt=""> Confirmada</div>
+
+                    <?php } else { ?>
+
+                        <div class="status pendente"><img src="imagens/relogio-pendente.svg" alt=""> Aguardando confirmação</div>
+
+                    <?php } ?>
+                </div>
+                <div class="consulta-detalhes-info">
+                    <h3>Consulta</h3>
+                    <p class="profissional"><img src="imagens/profissional-agenda.svg" alt=""> Dra fulana</p>
+                    <p class="tipo-consulta"><img src="imagens/online.svg" alt=""> Online</p>
+                </div>
+                <div class="consulta-botoes">
+                    <button>Ver detalhes</button>
+                    <button>Cancelar consulta</button>
+                </div>
             </div>
-            <!-- mudando o estilo dependendo do status da consulta   -->
-            <?php if(true){ ?> 
-
-                <div class="status confirmada"><img src="imagens/check.svg" alt=""> Confirmada</div>
-
-            <?php }else{ ?>
-
-                <div class="status pendente"><img src="imagens/relogio-pendente.svg" alt=""> Aguardando confirmação</div>  
-
-            <?php } ?>
-        </div>
-        <div class="consulta-detalhes-info">
-            <h3>Consulta</h3>
-            <p class="profissional"><img src="imagens/profissional-agenda.svg" alt=""> Dra fulana</p>
-            <p class="tipo-consulta"><img src="imagens/online.svg" alt=""> Online</p>
-        </div>
-        <div class="consulta-botoes">
-            <button>Ver detalhes</button>
-            <button>Cancelar consulta</button>
-        </div>
-    </div>
-    <?php endforeach; ?>
-    <!-- <div class="card-consulta">
+        <?php endforeach; ?>
+        <!-- <div class="card-consulta">
         <div class="consulta-data-info">
             <div class="data-info">
                 <div class="data"><img src="imagens/calendario.svg" alt=""> <span>Hoje</span></div>
@@ -81,18 +81,18 @@ $consultas = $stmt->fetchAll();
             <button>Cancelar consulta</button>
         </div>
     </div> -->
-</section>
+    </section>
 
 <?php } ?>
 
 <div id="modal-agendar" class="modal-agenda">
-        <div id="modal-agendar-close" class="close">X</div>
-        <form action="">
+    <div id="modal-agendar-close" class="close">X</div>
+    <form action="">
         <h2>Agende sua consulta</h2>
         <div>
-            <input type="date" >
+            <input type="date">
             <input type="time">
-       
+
             <select name="" id="">
                 <option value="">Selecione o profissional</option>
             </select>

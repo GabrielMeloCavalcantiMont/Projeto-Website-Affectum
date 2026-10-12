@@ -8,13 +8,13 @@ require 'includes/header.php';
 ?>
 
 <main>
-    
+
     <form action="">
         <h1>Agendamento</h1>
         <div>
-            <input type="date" >
+            <input type="date">
             <input type="time">
-       
+
             <select name="" id="">
                 <option value="">Selecione o profissional</option>
             </select>

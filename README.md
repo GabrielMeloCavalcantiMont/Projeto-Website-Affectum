@@ -1,6 +1,7 @@
 # Projeto-Website - Affectum
 
 ## 📋 Sobre o projeto
+
 Um trabalho proposto no 2º Semestre da FATEC ZS, do curso de Desenvolvimento de Software Multiplataforma, supervisionado pelos professores do curso. O objetivo é desenvolver um website (frontend e backend) para um cliente real fora dos muros da FATEC.
 
 **Projeto iniciado em:** 14/08/2026
@@ -17,5 +18,5 @@ Empresa cliente: Clínica de Psicologia **Affectum - SP**
 
 **Copyright (c) 2026 Up4Ware Team.**
 
-Este código foi desenvolvido como projeto acadêmico para a Clínica de Psicologia Affectum. 
+Este código foi desenvolvido como projeto acadêmico para a Clínica de Psicologia Affectum.
 Todos os direitos reservados. Nenhuma parte deste projeto pode ser reproduzida, distribuída ou utilizada sem autorização expressa dos detentores dos direitos.
