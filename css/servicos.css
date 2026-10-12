@@ -1,0 +1,262 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+/* Utilizei as variaveis do style.css */
+.servicos {
+    background-color: #ffffff;
+    padding-bottom: 60px;
+    color: #145780;
+}
+
+.servicos .secao 
+{ 
+    margin-top: 48px;
+}
+
+/* A introdução da página */
+.servicos-intro
+{
+    padding-top: 56px;
+    max-width: 900px;
+    text-align: center;
+}
+
+.servicos .eyebrow 
+{
+    font-size: 16px;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    color: #2a8389;
+    margin-bottom: 10px;
+}
+
+.servicos h1
+{
+    font-family: 'Special Gothic Expanded One', sans-serif;
+    color: var(--azul);
+    font-size: clamp(30px, 4.5vw, 42px);
+    margin-bottom: 20px;
+}
+
+.servicos .lead-texto
+{
+    font-size: 17px;
+    line-height: 1.7;
+    color: #d4943a;
+}
+
+/* Os 3 primeiros cards de atendimentos */
+.card-servico
+{
+    background: #ffffff;
+    border: 1px solid #f1e6d6;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s ease, border-color .2s ease;
+}
+
+.card-servico:hover
+{
+    transform: translateY(-3px);
+    border-color: var(--pessego);
+}
+
+.card-servico .icone
+{
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--pessego);
+    color: var(--azul);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.detalhes
+{
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows .5s cubic-bezier(.4, 0, .2, 1), opacity .4s ease;
+}
+
+.detalhes.aberto
+{
+    grid-template-rows: 1fr;
+    opacity: 1;
+}
+
+.detalhes-conteudo 
+{
+    overflow: hidden;
+    min-height: 0;
+}
+
+.card-servico .acoes {
+    margin-top: auto;
+    padding-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-servico h2
+{
+    font-family: 'Amethysta', serif;
+    font-size: 20px;
+    color: var(--azul);
+    margin-bottom: 8px;
+}
+
+.card-servico p
+{
+    font-size: 15px;
+    line-height: 1.6;
+    color: #5b6b76;
+}
+
+.card-servico .texto-completo
+{
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #f1e6d6;
+    font-size: 14px;
+}
+
+.link-mais
+{
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    font-size: 14px;
+    color: var(--azul);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.link-mais:hover 
+{ 
+    text-decoration: underline; 
+}
+
+/* troca o texto conforme o estado */
+.link-mais .menos 
+{ 
+    display: none; 
+}
+
+.link-mais[aria-expanded="true"] .mais 
+{ 
+    display: none; 
+}
+
+.link-mais[aria-expanded="true"] .menos 
+{ 
+    display: inline; 
+}
+
+/* setinha que gira */
+.link-mais .seta 
+{ 
+    transition: transform .4s cubic-bezier(.4, 0, .2, 1); 
+    font-size: 12px; 
+}
+
+.link-mais[aria-expanded="true"] .seta 
+{ 
+    transform: rotate(180deg); 
+}
+
+/* respeita quem desativou animações no sistema */
+/* @media (prefers-reduced-motion: reduce)
+{
+    .detalhes, .link-mais .seta, .card-servico { transition: none; }
+} */
+ 
+/* Botão de agendar */
+.btn-agendar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--amarelo);
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 6px 20px;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background .2s ease;
+}
+
+.btn-agendar:hover 
+{ 
+    background: #d4943a; color: #fff; 
+}
+
+.btn-agendar.grande 
+{ 
+    padding: 10px 32px; font-size: 17px; 
+}
+ 
+/* Títulos de área */
+.titulo-area 
+{ 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 18px; 
+}
+
+.titulo-area i 
+{ 
+    font-size: 24px; 
+    color: var(--ciano); 
+}
+
+.titulo-area h2 
+{ 
+    font-family: 'Amethysta', serif; 
+    color: var(--azul); 
+    font-size: 26px; 
+    margin: 0; 
+}
+ 
+/* Psicologia e Fonoaudiologia */
+.item-servico {
+    background: #fff;
+    border: 1px solid #f1e6d6;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+}
+
+.item-servico > i 
+{ 
+    font-size: 22px; 
+    color: var(--ciano); 
+    margin-top: 2px; 
+}
+
+.item-servico strong 
+{ 
+    display: block; 
+    color: var(--azul);
+    font-weight: normal; 
+    font-size: 16px; 
+    margin-bottom: 4px; 
+}
+
+.item-servico span 
+{ 
+    font-size: 14px; 
+    line-height: 1.5; 
+    color: #5b6b76; 
+}
