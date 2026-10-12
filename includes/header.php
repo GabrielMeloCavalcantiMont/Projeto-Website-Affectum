@@ -26,6 +26,15 @@ $logado = isset($_SESSION['usuario_id']);
     <link
         href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Amethysta&family=Huninn&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Special+Gothic+Expanded+One&display=swap"
         rel="stylesheet" />
+        <link rel='stylesheet' href='dist/skeleton.css' />
+        <link rel='stylesheet' href='dist/themes/classic/theme.css' />
+        <link rel='stylesheet' href='dist/themes/classic/palette.css' />
+
+        <script src='dist/fullcalendar.global.js'></script>
+        <script src='dist/themes/classic/global.js'></script>
+        
+        
+
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="css/style.css" />
     <?php if (!empty($css_pagina)): ?>
