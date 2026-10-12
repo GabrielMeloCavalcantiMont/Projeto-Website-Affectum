@@ -71,12 +71,20 @@
 }
 
 .card-consulta .consulta-data-info .status{
-    background-color: #E4F3E9;
-    color: #237746;
     font-size: 12px;
     border-radius: 50px;
     padding: 6px 10px;
     gap: 10px;
+}
+
+.card-consulta .consulta-data-info .status.confirmada{
+    background-color: #E4F3E9;
+    color: #237746;
+}
+
+.card-consulta .consulta-data-info .status.pendente{
+    background-color: #FEE8D9;
+    color: #D56A32;
 }
 
 .card-consulta .consulta-data-info .status img{
@@ -212,4 +220,46 @@ form input.botao-enviar{
 
 form input.botao-enviar:hover{
     background-color: var(--ciano);
+}
+
+/* Página profissional */
+#calendar{
+    max-width: 500px;
+}
+
+div[role="gridcell"]{
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+div[role="gridcell"]:hover{
+    /* color: white; */
+    background-color: #fef7dc;
+}
+
+#modal-info-consulta .buttons-info-consulta{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-info-consulta .buttons-info-consulta button{
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+#modal-info-consulta .buttons-info-consulta button:hover{
+    background-color: white;
+    color: var(--azul);
 }

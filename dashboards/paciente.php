@@ -1,4 +1,5 @@
 <?php
+
 //pagina do paciente
 //busca as futuras consultas 
 $stmt = $pdo->prepare("SELECT a.data_hora_inicio, a.modalidade, a.status, u.nome 
@@ -18,7 +19,7 @@ $consultas = $stmt->fetchAll();
 </h2>
 
 
-<?php if (/*empty($consultas) comentei pra testar o visual quando tiver consulta */ false){ ?>
+<?php if (/*empty($consultas) comentei pra testar o visual quando tiver consulta */ true){ ?>
     <p>Você não tem consultas agendadas.</p>
     <!--Vai ter pagina de agendamento? -->
     <button id="btn-agendar" class="btn">Agendar Consulta</button>
@@ -29,6 +30,9 @@ $consultas = $stmt->fetchAll();
 
 <!-- Card de consulta -->
 <section class="consultas">
+    <!-- Tem dois inserts no agendamento, na teoria era pra aparecer, mas não aparece -->
+    <?php foreach ($consultas as $consulta): ?>
+    
     <div class="card-consulta">
         <div class="consulta-data-info">
             <div class="data-info">
@@ -36,7 +40,16 @@ $consultas = $stmt->fetchAll();
                 <div class="divisoria">|</div>
                 <div class="hora"><img src="imagens/relogio.svg" alt=""> 14:00</div>
             </div>
-            <div class="status"><img src="imagens/check.svg" alt=""> Confirmada</div>
+            <!-- mudando o estilo dependendo do status da consulta   -->
+            <?php if(true){ ?> 
+
+                <div class="status confirmada"><img src="imagens/check.svg" alt=""> Confirmada</div>
+
+            <?php }else{ ?>
+
+                <div class="status pendente"><img src="imagens/relogio-pendente.svg" alt=""> Aguardando confirmação</div>  
+
+            <?php } ?>
         </div>
         <div class="consulta-detalhes-info">
             <h3>Consulta</h3>
@@ -48,8 +61,8 @@ $consultas = $stmt->fetchAll();
             <button>Cancelar consulta</button>
         </div>
     </div>
-    
-    <div class="card-consulta">
+    <?php endforeach; ?>
+    <!-- <div class="card-consulta">
         <div class="consulta-data-info">
             <div class="data-info">
                 <div class="data"><img src="imagens/calendario.svg" alt=""> <span>Hoje</span></div>
@@ -67,7 +80,7 @@ $consultas = $stmt->fetchAll();
             <button>Ver detalhes</button>
             <button>Cancelar consulta</button>
         </div>
-    </div>
+    </div> -->
 </section>
 
 <?php } ?>
@@ -89,7 +102,7 @@ $consultas = $stmt->fetchAll();
         </div>
         <input type="submit" class="botao-enviar" value="Agendar">
     </form>
-    </div>
+</div>
 
 <hr style="margin: 40px 0;">
 
