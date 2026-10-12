@@ -1,0 +1,211 @@
+main
+{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 40px 24px 112px;
+}
+
+/* Bloco do sobre a clínica */
+.sobre-intro
+{
+    max-width: 760px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.sobre-intro h1
+{
+    font-family: 'Special Gothic Expanded One', sans-serif;
+    margin: 0 0 20px;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    color: #145780;
+}
+
+/* Barrinha laranja embaixo do título */
+.sobre-intro h1::after
+{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    margin: 16px auto 0;
+    border-radius: 2px;
+    background: #f5b55b;
+}
+
+.sobre-intro p
+{
+    font-family: 'Alegreya', serif;
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4f5b66;
+}
+
+/* Bloco dos fundadores */
+.sobre-fundadores
+{
+    margin-bottom: 40px;
+    padding: 40px 48px;
+    border-radius: 20px;
+    background: #145780;
+    color: #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-fundadores p
+{
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+/* Linha do tempo */
+.linha-tempo
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-bottom: 96px;
+}
+
+.marco
+{
+    padding: 28px;
+    border-top: 4px solid #f5b55b;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.marco__ano
+{
+    display: block;
+    margin-bottom: 4px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4f5b66;
+}
+
+.marco h2
+{
+    margin: 0 0 12px;
+    font-size: 1.15rem;
+    color: #145780;
+}
+
+.marco p
+{
+    margin: 0;
+    line-height: 1.7;
+    color: #4f5b66;
+}
+
+/* Todos os cards de profissionais */
+.equipe-grade
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+.equipe h2
+{
+    text-align: center;
+    color: #145780;
+    font-family: 'Lato', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    margin: 48px 0 32px;
+}
+
+.card-prof
+{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #dbe7ee;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(20, 87, 128, 0.08);
+}
+
+/* A foto do profissional */
+.card-prof__foto
+{
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.card-prof__corpo
+{
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-prof h3
+{
+    margin: 0 0 10px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0d3b58;
+}
+
+.card-prof__funcao 
+{
+     align-self: flex-start;
+    margin: 0 0 18px;
+    padding: 4px 14px;
+    border-radius: 999px;
+    background: #eaf2f7;
+    color: #145780;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.card-prof__texto
+{
+    margin: 0 0 24px;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    color: #4f5b66;
+}
+
+/* Botões de redes sociais */
+.redes 
+{
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    margin: auto 0 0;
+    padding: 0;
+}
+
+.redes__btn
+{
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #145780;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.redes__btn:hover
+{
+    background: #f5b55b;
+    color: #145780;
+}
+
+.redes__btn:focus-visible
+{
+    outline: 3px solid #f5b55b;
+    outline-offset: 2px;
+}

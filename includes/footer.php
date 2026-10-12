@@ -22,8 +22,8 @@
                     <ul>
                         <!-- Mudei tudo pra php se não o link não roda-->
                         <li><a href="index.php">Início</a></li>
-                        <li><a href="sobre.php">Sobre</a></li>
-                        <li><a href="#">Profissionais</a></li>
+                        <li><a href="nos.php">Sobre</a></li>
+                        <li><a href="agendamento.php">Agendamento</a></li>
                         <li><a href="login.php">Login</a></li>
                     </ul>
                 </div>

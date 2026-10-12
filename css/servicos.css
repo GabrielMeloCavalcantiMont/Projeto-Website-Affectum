@@ -32,7 +32,7 @@
 .servicos h1
 {
     font-family: 'Special Gothic Expanded One', sans-serif;
-    color: var(--azul);
+    color: var(--amarelo);
     font-size: clamp(30px, 4.5vw, 42px);
     margin-bottom: 20px;
 }
@@ -41,14 +41,22 @@
 {
     font-size: 17px;
     line-height: 1.7;
-    color: #d4943a;
+    color: var(--azul);
+}
+
+/* Faixa de cores para separação */
+.faixa
+{
+    background: #145780;
+    padding: 48px 0;
+    margin-top: 48px;
 }
 
 /* Os 3 primeiros cards de atendimentos */
 .card-servico
 {
     background: #ffffff;
-    border: 1px solid #f1e6d6;
+    border: 2px solid #FADBAF;
     border-radius: 16px;
     padding: 24px;
     display: flex;
@@ -59,16 +67,17 @@
 .card-servico:hover
 {
     transform: translateY(-3px);
-    border-color: var(--pessego);
+    border-color: #F5B55B;
 }
 
+/* Icone dos cards */
 .card-servico .icone
 {
     width: 48px;
     height: 48px;
     border-radius: 14px;
-    background: var(--pessego);
-    color: var(--azul);
+    background: #2a8389;
+    color: #ffffff;
     font-size: 24px;
     display: flex;
     align-items: center;
@@ -127,6 +136,7 @@
     font-size: 14px;
 }
 
+/* O Link de saiba mais */
 .link-mais
 {
     background: none;
@@ -173,12 +183,6 @@
 { 
     transform: rotate(180deg); 
 }
-
-/* respeita quem desativou animações no sistema */
-/* @media (prefers-reduced-motion: reduce)
-{
-    .detalhes, .link-mais .seta, .card-servico { transition: none; }
-} */
  
 /* Botão de agendar */
 .btn-agendar {
@@ -217,46 +221,55 @@
 .titulo-area i 
 { 
     font-size: 24px; 
-    color: var(--ciano); 
+    color: #f5b55b; 
 }
 
 .titulo-area h2 
 { 
-    font-family: 'Amethysta', serif; 
-    color: var(--azul); 
-    font-size: 26px; 
+    font-family: 'Special Gothic Expanded One', sans-serif; 
+    color: #f5b55b; 
+    font-size: 36px; 
     margin: 0; 
 }
  
-/* Psicologia e Fonoaudiologia */
+/* Psicologia, Fonoaudiologia e Fotografia */
 .item-servico {
     background: #fff;
-    border: 1px solid #f1e6d6;
-    border-radius: 12px;
-    padding: 16px;
+    border: 2px solid #fadbaf;
+    border-radius: 14px;
+    padding: 18px;
     display: flex;
-    gap: 12px;
+    gap: 14px;
+    box-shadow: 0 4px 14px rgba(20, 87, 128, .10);
 }
 
 .item-servico > i 
 { 
-    font-size: 22px; 
-    color: var(--ciano); 
-    margin-top: 2px; 
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--azul);
+    color: #ffffff;
+    font-size: 22px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
 }
 
 .item-servico strong 
 { 
+    font-family: 'Lato', sans-serif;
     display: block; 
     color: var(--azul);
-    font-weight: normal; 
-    font-size: 16px; 
+    font-weight: 700; 
+    font-size: 18px; 
     margin-bottom: 4px; 
 }
 
 .item-servico span 
 { 
-    font-size: 14px; 
+    font-size: 15px; 
     line-height: 1.5; 
-    color: #5b6b76; 
+    color: #33414b; 
 }

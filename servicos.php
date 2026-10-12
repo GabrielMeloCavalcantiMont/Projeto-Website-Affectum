@@ -45,6 +45,19 @@
         ['bi-balloon', 'Distúrbios de Comunicação em Crianças', 'Apoio ao desenvolvimento da comunicação em crianças com atrasos na fala e na linguagem.'],
     ];
 
+    $fotografia = [
+        ['bi-person-bounding-box', 'Ensaio Fotográfico', 'Retratos pessoais, de família e profissionais, para portfólio, currículo ou recordação.'],
+        ['bi-handbag', 'Fotografia de Moda', 'Lookbooks, ensaios de modelos e campanhas publicitárias.'],
+        ['bi-box-seam', 'Fotografia de Produto', 'Imagens de alta qualidade para e-commerce e publicidade, com foco em luz e detalhes.'],
+        ['bi-suit-heart', 'Pré-Casamento e Noivado', 'Pré-wedding, noivado e retratos formais ou informais do casal.'],
+        ['bi-flower1', 'Fotografia de Gestante', 'Ensaios de gravidez, sozinha ou com a família.'],
+        ['bi-moon-stars', 'Fotografia Newborn', 'Fotos delicadas de recém-nascidos, geralmente nas primeiras duas semanas de vida.'],
+        ['bi-gift', 'Aniversários e Festas', 'Ensaios temáticos e cobertura de eventos e celebrações.'],
+        ['bi-palette', 'Fotografia Fine Art', 'Ensaios artísticos e imagens para decoração.'],
+        ['bi-journal-richtext', 'Book ou Portfólio', 'Para modelos, atores e profissionais que precisam se apresentar ao mercado.'],
+        ['bi-phone', 'Mídias Sociais', 'Sessões para influenciadores e criadores, com fotos para feed e stories.'],
+    ];
+
     require 'includes/header.php';
 ?>
 
@@ -85,17 +98,19 @@
     </section>
 
     <!-- Psicologia -->
-    <section class="container secao">
-        <div class="titulo-area"><i class="bi bi-heart-pulse" aria-hidden="true"></i><h2>Psicologia</h2></div>
-        <div class="row g-3">
-            <?php foreach ($psicologia as [$icone, $titulo, $desc]): ?>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="item-servico h-100">
-                        <i class="bi <?= $icone ?>" aria-hidden="true"></i>
-                        <div><strong><?= htmlspecialchars($titulo) ?></strong><span><?= htmlspecialchars($desc) ?></span></div>
+    <section class="faixa">
+        <div class="container">
+            <div class="titulo-area"><i class="bi bi-heart-pulse" aria-hidden="true"></i><h2>Psicologia</h2></div>
+            <div class="row g-3">
+                <?php foreach ($psicologia as [$icone, $titulo, $desc]): ?>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="item-servico h-100">
+                            <i class="bi <?= $icone ?>" aria-hidden="true"></i>
+                            <div><strong><?= htmlspecialchars($titulo) ?></strong><span><?= htmlspecialchars($desc) ?></span></div>
+                        </div>
                     </div>
-                </div>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            </div>
         </div>
     </section>
 
@@ -111,6 +126,23 @@
                     </div>
                 </div>
             <?php endforeach; ?>
+        </div>
+    </section>
+
+    <!-- Fotografia -->
+    <section class="faixa">
+        <div class="container">
+            <div class="titulo-area"><i class="bi bi-camera" aria-hidden="true"></i><h2>Fotografia</h2></div>
+            <div class="row g-3">
+                <?php foreach ($fotografia as [$icone, $titulo, $desc]): ?>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="item-servico h-100">
+                            <i class="bi <?= $icone ?>" aria-hidden="true"></i>
+                            <div><strong><?= htmlspecialchars($titulo) ?></strong><span><?= htmlspecialchars($desc) ?></span></div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
         </div>
     </section>
 

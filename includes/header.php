@@ -31,6 +31,11 @@ $logado = isset($_SESSION['usuario_id']);
     <?php if (!empty($css_pagina)): ?>
         <link rel="stylesheet" href="<?= htmlspecialchars($css_pagina) ?>" />
     <?php endif; ?>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -65,8 +70,7 @@ $logado = isset($_SESSION['usuario_id']);
 
                     <!-- agora os links das outras páginas são públicos, não são limitados apenas a quem tem login -->
                      <a href="servicos.php" class="nav-link-clean">Nossos serviços</a>
-                     <a href="sobre.php" class="nav-link-clean">Sobre nós</a>
-                     <a href="profissional.php" class="nav-link-clean">Profissionais</a>
+                     <a href="nos.php" class="nav-link-clean">Nós</a>
                      <a href="agendamento.php" class="nav-link-clean">Agendamento</a>
 
                      <?php if ($logado): ?>
