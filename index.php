@@ -233,19 +233,19 @@ require 'includes/header.php';
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="./imagens/entrada.jpeg" class="d-block" alt="Clínica" />
+      <img src="./imagens/Affectum-Entrada.avif" class="d-block" alt="Clínica" />
     </div>
     <div class="carousel-item">
       <img
-        src="./imagens/clinica.jpeg"
+        src="./imagens/Affectum-Sala.avif"
         class="d-block"
         alt="Sala principal" />
     </div>
     <div class="carousel-item">
       <img
-        src="./imagens/placeholder3.jpg"
+        src="./imagens/Affectum_Banner_Entrada.avif"
         class="d-block"
-        alt="Placeholder 3" />
+        alt="Banner da entrada da clínica" />
     </div>
   </div>
   <button
